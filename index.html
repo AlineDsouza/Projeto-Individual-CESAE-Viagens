@@ -1,0 +1,833 @@
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CESAE Viagens</title>
+
+    <!--link  bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- Menu / navegação-->
+    <header>
+        <!-- cria responsividade no nav -->
+        <nav  class="navbar navbar-expand-lg bg-dark fixed-top" data-bs-theme="dark">
+
+            <div class="container ">
+
+                <!-- nome cesae viagen -->
+                <a class="navbar-brand fw-bold" href="#">
+                    <img src="icons/icone.png" alt="icon aviao">
+                    CESAE Viagens
+                </a>
+
+                <!-- Botão que aparece nas telas menores -->
+                <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarConteudo"
+                    aria-controls="navbarConteudo"
+                    aria-expanded="false"
+                    aria-label="Abrir menu">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                 <!-- Links de navegação -->
+                <div class="collapse navbar-collapse"
+                    id="navbarConteudo">
+                    <!-- Lista das seções do site -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <!-- Link para a página inicial -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio">
+                                Início
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#destinos">
+                                Destinos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#planos">
+                                Planos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#perguntas">
+                                Perguntas
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Botão para fazer uma reserva -->
+                    <a href="#proposta" class="btn btn-warning">
+                        Reservar
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SEÇÃO INICIAL -->
+    <section id="inicio" class="bg-dark text-white  pt-5 pb-5 mt-4">
+
+        <div class="container text-center pt-4 mt-4 ">
+
+            <h1 class="display-5 fw-bold mb-3">Descubra o mundo com a CESAE Viagens</h1>
+
+            <p class="text-white-50 mb-3">Viagens à medida, com apoio em português do primeiro ao último dia.</p>
+
+            <!-- Botões da apresentação -->
+            <a href="#planos" class="btn btn-warning me-1">Ver planos</a>
+            <a href="#destinos" class="btn btn-outline-light">Ver destinos</a>
+        </div>
+
+    </section>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="mx-auto" style="max-width: 1440px;">
+
+
+        <!-- SECÇÃO DOS BENEFÍCIOS -->
+        <section class="py-4">
+
+            <div class="container">
+
+                <h2 class="text-center mb-4">Porquê a CESAE Viagens?</h2>
+
+                <!-- Organização dos três benefícios -->
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                    <!-- destinos a medida -->
+                    <div class="col text-center">
+
+                        <div class="mb-3">
+
+                            <span class="bg-primary-subtle text-primary rounded-circle p-3 d-inline-block">
+                            <img src="icons/location.png" alt="location image">
+                            </span>
+
+                        </div>
+
+                        <h5>Destinos à medida</h5>
+
+                        <p class="text-secondary small mb-0">
+                            Escolhemos o roteiro consigo, do primeiro café ao último pôr do sol.
+                        </p>
+
+                    </div>
+
+                    <!--viaja em segurança -->
+                    <div class="col text-center">
+
+                        <div class="mb-3">
+
+                            <span class="bg-primary-subtle text-primary rounded-circle p-3 d-inline-block">
+                            <img src="icons/security.png" alt="security image">
+                            </span>
+
+                        </div>
+
+                        <h5>Viaja em segurança</h5>
+
+                        <p class="text-secondary small mb-0">
+                            Seguro incluído e apoio 24 horas, em português, onde quer que esteja.
+                        </p>
+
+                    </div>
+
+                    <!-- Datas flexíveis -->
+                    <div class="col text-center">
+
+                        <div class="mb-3">
+
+                            <span class="bg-primary-subtle text-primary rounded-circle p-3 d-inline-block">
+                            <img src="icons/check.png" alt="datas flexíveis">
+                            </span>
+
+                        </div>
+
+                        <h5>Datas flexíveis</h5>
+
+                        <p class="text-secondary small mb-0">
+                            Altere a data da viagem até 15 dias antes, sem custos.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECÇÃO DOS DESTINOS -->
+        <section id="destinos" class="bg-light py-4">
+
+            <div class="container">
+
+                <h2 class="text-center mb-4">
+                    Destinos em destaque
+                </h2>
+
+                <!-- Carousel com os destinos -->
+                <div id="carouselDestinos" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+
+                    <!-- Indicadores do carousel -->
+                    <div class="carousel-indicators">
+
+                        <button type="button" data-bs-target="#carouselDestinos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Destino 1">
+                        </button>
+
+                        <button type="button"
+                            data-bs-target="#carouselDestinos"
+                            data-bs-slide-to="1"
+                            aria-label="Destino 2">
+                        </button>
+
+                        <button type="button"
+                            data-bs-target="#carouselDestinos"
+                            data-bs-slide-to="2"
+                            aria-label="Destino 3">
+                        </button>
+
+                    </div>
+
+
+                    <!-- Conteúdo do carousel -->
+                    <div class="carousel-inner">
+
+
+                        <!-- Primeiro destino -->
+                        <div class="carousel-item active">
+
+                            <div class="ratio ratio-21x9">
+
+                                <img src="img/porto.jpg"
+                                    class="w-100 h-100 object-fit-cover"
+                                    alt="Cidade do Porto">
+
+                            </div>
+
+                            <div class="carousel-caption">
+
+                                <h5>Porto</h5>
+
+                                <p class="d-none d-md-block"> Caminhe pelas margens do Rio Douro. </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Segundo destino -->
+                        <div class="carousel-item">
+
+                            <div class="ratio ratio-21x9">
+
+                                <img src="img/paris.jpg"
+                                    class="w-100 h-100 object-fit-cover"
+                                    alt="Cidade de Paris">
+
+                            </div>
+
+                            <div class="carousel-caption">
+
+                                <h5>Paris</h5>
+
+                                <p class="d-none d-md-block">
+                                    A cidade do amor, da arte e da cultura.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Terceiro destino -->
+                        <div class="carousel-item">
+
+                            <div class="ratio ratio-21x9">
+
+                                <img src="img/roma.jpg"
+                                    class="w-100 h-100 object-fit-cover"
+                                    alt="Cidade de Roma">
+
+                            </div>
+
+                            <div class="carousel-caption">
+
+                                <h5>Roma</h5>
+
+                                <p class="d-none d-md-block">
+                                    História, monumentos e gastronomia italiana.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Botão para voltar ao destino anterior -->
+                    <button class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselDestinos"
+                        data-bs-slide="prev">
+
+                        <span class="carousel-control-prev-icon"
+                            aria-hidden="true">
+                        </span>
+
+                        <span class="visually-hidden">
+                            Anterior
+                        </span>
+
+                    </button>
+
+
+                    <!-- Botão para avançar para o próximo destino -->
+                    <button class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselDestinos"
+                        data-bs-slide="next">
+
+                        <span class="carousel-control-next-icon"
+                            aria-hidden="true">
+                        </span>
+
+                        <span class="visually-hidden">
+                            Seguinte
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SECÇÃO DOS PLANOS -->
+        <section id="planos" class="py-4">
+
+            <div class="container">
+
+                <h2 class="text-center mb-5">
+                    Os nossos planos
+                </h2>
+
+                <!-- Três cartões dos planos -->
+                <div class="row row-cols-1 row-cols-md-3 g-3 mb-4">
+
+                    <!-- PLANO ESSENCIAL -->
+                    <div class="col">
+
+                        <div class="card h-100 text-center">
+
+                            <div class="card-header bg-white fw-semibold">
+                                Essencial
+                            </div>
+
+                            <div class="card-body d-flex flex-column">
+
+                                <h3 class="display-6">
+                                    199 €
+                                </h3>
+
+                                <p class="text-secondary small">
+                                    por pessoa
+                                </p>
+
+                                <ul class="list-unstyled my-3 fw-semibold">
+
+                                    <li class="mb-2 ">
+                                        Voos e alojamento
+                                    </li>
+
+                                    <li class="mb-2">
+                                        Seguro de viagem
+                                    </li>
+
+                                    <li class="mb-2">
+                                        Apoio por email
+                                    </li>
+
+                                </ul>
+
+                                <a href="#proposta"
+                                    class="btn btn-outline-primary mt-auto">
+                                    Escolher
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PLANO FAMÍLIA -->
+                    <div class="col">
+
+                        <div class="card h-100 text-center border-primary shadow-sm">
+
+                            <div class="card-header bg-primary text-white fw-semibold">
+                                Família (mais popular)
+                            </div>
+
+                            <div class="card-body d-flex flex-column">
+
+                                <h3 class="display-6">
+                                    349 €
+                                </h3>
+
+                                <p class="text-secondary small">
+                                    por pessoa
+                                </p>
+
+                                <ul class="list-unstyled my-3 fw-semibold">
+
+                                    <li class="mb-2">
+                                        Tudo do Essencial
+                                    </li>
+
+                                    <li class="mb-2">
+                                        Transfers incluídos
+                                    </li>
+
+                                    <li class="mb-2">
+                                        Atividades para crianças
+                                    </li>
+
+                                    <li class="mb-2">
+                                        Apoio 24 horas
+                                    </li>
+
+                                </ul>
+
+                                <a href="#proposta"
+                                    class="btn btn-primary mt-auto">
+                                    Escolher
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PLANO PREMIUM -->
+                    <div class="col">
+
+                        <div class="card h-100 text-center">
+
+                            <div class="card-header bg-white fw-semibold">
+                                Premium
+                            </div>
+
+                            <div class="card-body d-flex flex-column">
+
+                                <h3 class="display-6">
+                                    599 €
+                                </h3>
+
+                                <p class="text-secondary small">
+                                    por pessoa
+                                </p>
+
+                                <ul class="list-unstyled my-3 fw-semibold">
+
+                                    <li class="mb-2">
+                                        Tudo da Família
+                                    </li>
+
+                                    <li class="mb-2">
+                                        Hotéis de 5 estrelas
+                                    </li>
+
+                                    <li class="mb-2">
+                                        Guia privado
+                                    </li>
+
+                                    <li class="mb-2">
+                                        Cancelamento flexível
+                                    </li>
+
+                                </ul>
+
+                                <a href="#proposta"
+                                    class="btn btn-outline-primary mt-auto">
+                                    Escolher
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SECÇÃO DAS PERGUNTAS FREQUENTES -->
+        <section id="perguntas" class="bg-light py-4">
+
+            <div class="container">
+
+                <h2 class="text-center mt-3 mb-3">
+                    Perguntas frequentes
+                </h2>
+
+                <!-- Centralizar o accordion -->
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-7 mb-3">
+
+                        <!-- Accordion com as perguntas -->
+                        <div class="accordion" id="accordionPerguntas">
+
+                            <!-- Primeira pergunta -->
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header">
+
+                                    <button class="accordion-button"
+                                        type="button" data-bs-toggle="collapse"  data-bs-target="#perguntaUm" aria-expanded="true" aria-controls="perguntaUm">
+                                        Posso pagar em prestações?
+                                    </button>
+
+                                </h2>
+
+                                <div id="perguntaUm"
+                                    class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionPerguntas">
+
+                                    <div class="accordion-body">
+
+                                        Sim. Dividimos o valor em até 6 prestações, sem juros.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Segunda pergunta -->
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header">
+
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#perguntaDois"
+                                        aria-expanded="false" aria-controls="perguntaDois">
+                                        O que acontece se eu precisar de cancelar?
+                                    </button>
+
+                                </h2>
+
+                                <div id="perguntaDois"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionPerguntas">
+                                    <div class="accordion-body">
+                                        Temos condições de cancelamento.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Terceira pergunta -->
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header">
+
+                                    <button class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#perguntaTres"
+                                        aria-expanded="false"
+                                        aria-controls="perguntaTres">
+                                        As crianças pagam o mesmo?
+                                    </button>
+                                </h2>
+                                <div id="perguntaTres"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionPerguntas">
+
+                                    <div class="accordion-body">
+
+                                        Sim.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SECÇÃO DO FORMULÁRIO -->
+        <section id="proposta" class="py-4">
+
+            <div class="container">
+
+                <h2 class="text-center mb-3">Peça uma proposta</h2>
+
+                <!-- Centralizar o formulário -->
+                <div class="row justify-content-center">
+
+                    <div class="col-md-8 col-lg-7">
+
+                        <form>
+                            <!-- Campo do nome e email -->
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+
+                                    <label for="nome" class="form-label"> Nome </label>
+
+                                    <input type="text" class="form-control" id="nome" required></div>
+
+                                <div class="col-md-6">
+
+                                    <label for="email" class="form-label">
+                                        Email
+                                    </label>
+
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                            </div>
+
+                            <!-- Campo do destino e número de pessoas -->
+                            <div class="row g-3 mt-0">
+
+                                <div class="col-md-6">
+
+                                    <label for="destino" class="form-label"> Destino</label>
+
+                                    <select class="form-select" id="destino">
+
+                                        <option value="lisboa" selected>Lisboa</option>
+
+                                        <option value="paris">Paris</option>
+
+                                        <option value="roma">Roma</option>
+
+                                    </select>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <label for="pessoas" class="form-label">
+                                        Número de pessoas
+                                    </label>
+
+                                    <input type="number" class="form-control"
+                                        id="pessoas" value="2" min="1" required>
+                                </div>
+
+                            </div>
+
+                            <!-- Campo da mensagem -->
+                            <div class="mt-3">
+
+                                <label for="mensagem" class="form-label">
+                                    Mensagem
+                                </label>
+
+                                <textarea class="form-control"
+                                    id="mensagem"
+                                    rows="3">
+                                </textarea>
+
+                            </div>
+
+                            <!-- Caixa de autorização -->
+                            <div class="form-check mt-3">
+
+                                <input type="checkbox" class="form-check-input" id="consentimento" required>
+
+                                <label class="form-check-label"
+                                    for="consentimento">
+                                    Aceito ser contactado(a) com a proposta
+                                </label>
+
+                            </div>
+
+                            <!-- Botão para enviar o pedido -->
+                            <div class="d-grid mt-3">
+
+                                <button type="submit" class="btn btn-primary">
+                                    Enviar pedido
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ DO SITE -->
+    <footer class="bg-dark text-white py-4">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- Informações da empresa -->
+                <div class="col-md-4">
+
+                    <h5 class="fs-6">
+                       <img src="icons/aviao.png" alt="icone"> CESAE Viagens
+                    </h5>
+
+                    <p class="text-secondary small">
+                        Viagens à medida desde 2010.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Links úteis -->
+                <div class="col-md-4">
+
+                    <h5 class="fs-6">
+                        Ligações
+                    </h5>
+
+                    <ul class="list-unstyled small">
+
+                        <li>
+                            <a href="#planos"
+                                class="link-secondary text-decoration-none">
+                                Planos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#perguntas"
+                                class="link-secondary text-decoration-none">
+                                Perguntas frequentes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#proposta"
+                                class="link-secondary text-decoration-none">
+                                Contacto
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- Newsletter -->
+                <div class="col-md-4">
+
+                    <h5 class="fs-6">
+                        Newsletter
+                    </h5>
+
+                    <form>
+
+                        <div class="input-group input-group-sm">
+
+                            <!-- Ícone de email -->
+                    <span class="input-group-text">
+                    <img src="icons/mail.png" alt="email">
+                    </span>
+
+                <!--introduzir o email -->
+                <input type="email"
+                    class="form-control"
+                    placeholder="O seu email"
+                    aria-label="O seu email"
+                    required>
+
+                <!-- Botão para subscrever -->
+                <button class="btn btn-warning" type="submit">Subscrever</button>
+
+                        </div>
+
+                    </form>
+
+                    <!-- Redes sociais -->
+                    <div class="mt-3">
+
+                        <a href="#"
+                            class="link-light text-decoration-none me-2"
+                            aria-label="Instagram">
+                            <img src="icons/instagram.png" alt="instagram">
+                        </a>
+
+                        <a href="#"
+                            class="link-light text-decoration-none me-2"
+                            aria-label="Facebook">
+                            <img src="icons/facebook.png" alt="facebook">
+                        </a>
+
+                        <a href="#"
+                            class="link-light text-decoration-none"
+                            aria-label="YouTube">
+                            <img src="icons/youtube.png" alt="youtube">
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- linha para separar -->
+            <hr class="border-secondary">
+
+            <!-- copy -->
+            <p class="text-center text-secondary small mb-0">
+                © 2026 CESAE Viagens
+            </p>
+
+        </div>
+
+    </footer>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+</body>
+
+</html>
